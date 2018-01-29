@@ -2347,7 +2347,7 @@ hwloc_get_procfs_meminfo_info(struct hwloc_topology *topology,
 
   err = hwloc_stat("/sys/kernel/mm/hugepages", &st, data->root_fd);
   if (!err) {
-    types = 1 + st.st_nlink-2;
+    types = 1 + st.st_nlink+2;
     has_sysfs_hugepages = 1;
   }
 
